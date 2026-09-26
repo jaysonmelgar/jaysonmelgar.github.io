@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jayson Melgar | eCommerce & Shopify Specialist</title>
+
+  <meta name="description" content="Jayson Melgar - eCommerce and Shopify Specialist providing Shopify store support, product listing, store management, and eCommerce assistance.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2a2b2d;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #eeeeee;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2a2b2d;
+    }
+
+    .logo span {
+      color: #555555;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #3e3e3e;
+    }
+
+    .nav-links a:hover {
+      color: #000000;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background: #f7f7f7;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: #555555;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      color: #202124;
+    }
+
+    .hero h1 span {
+      color: #555555;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 19px;
+      color: #5a5a5a;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #2a2b2d;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #000000;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #2a2b2d;
+      color: #2a2b2d;
+      background: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background: #2a2b2d;
+      color: #ffffff;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      margin-bottom: 45px;
+    }
+
+    .section-title small {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+      font-size: 12px;
+      color: #777777;
+      margin-bottom: 10px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      color: #202124;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #5c5c5c;
+    }
+
+    .about-card {
+      background: #f5f5f5;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .about-card h3 {
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+
+    .about-card ul {
+      list-style: none;
+    }
+
+    .about-card li {
+      padding: 10px 0;
+      border-bottom: 1px solid #dddddd;
+      color: #555555;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #f7f7f7;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      padding: 32px;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    }
+
+    .service-number {
+      font-size: 13px;
+      font-weight: 700;
+      color: #888888;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #666666;
+      font-size: 15px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .skill {
+      padding: 20px;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      background: #f7f7f7;
+    }
+
+    .portfolio-card {
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 45px;
+      text-align: center;
+    }
+
+    .portfolio-card h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-card p {
+      color: #666666;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 9px 16px;
+      background: #eeeeee;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      background: #2a2b2d;
+      color: #ffffff;
+      padding: 55px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .contact-box p {
+      color: #dddddd;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: 700;
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 3px;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px 0;
+      text-align: center;
+      font-size: 13px;
+      color: #777777;
+      border-top: 1px solid #eeeeee;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .nav-container {
+        height: auto;
+        padding: 18px 0;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .contact-box {
+        padding: 35px 22px;
+      }
+
+      .contact-box h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container nav-container">
+      <div class="logo">Jayson<span>Melgar</span></div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          eCommerce & Shopify Specialist
+        </div>
+
+        <h1>
+          Helping businesses build a better
+          <span>eCommerce experience.</span>
+        </h1>
+
+        <p>
+          Hi, I'm Jayson. I help online businesses with Shopify store
+          support, product listing, store management, and other
+          eCommerce tasks.
+        </p>
+
+        <div class="buttons">
+          <a href="#services" class="btn btn-primary">
+            View My Services
+          </a>
+
+          <a href="#contact" class="btn btn-secondary">
+            Let's Connect
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <small>About Me</small>
+        <h2>Focused on helping eCommerce businesses.</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <p>
+            I'm Jayson Melgar, an aspiring eCommerce and Shopify
+            Specialist based in the Philippines.
+          </p>
+
+          <p>
+            I'm developing practical skills in Shopify store
+            management, product listing, eCommerce support, and
+            digital tools to help online businesses operate more
+            efficiently.
+          </p>
+
+          <p>
+            My goal is simple: provide organized, reliable, and
+            detail-oriented support so business owners can focus
+            on growing their stores.
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <h3>What I Focus On</h3>
+
+          <ul>
+            <li>Shopify Store Support</li>
+            <li>Product Listing & Organization</li>
+            <li>eCommerce Store Management</li>
+            <li>Customer Support Assistance</li>
+            <li>Basic Digital Marketing Support</li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+        <small>Services</small>
+        <h2>How I can help.</h2>
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3>Shopify Support</h3>
+          <p>
+            Assistance with Shopify store tasks, organization,
+            product management, and day-to-day store support.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3>Product Listing</h3>
+          <p>
+            Product uploads, descriptions, pricing, collections,
+            tags, images, and basic store organization.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3>eCommerce Assistance</h3>
+          <p>
+            Reliable virtual assistance for routine eCommerce
+            tasks and online store operations.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <h3>Store Management</h3>
+          <p>
+            Help with keeping products, collections, pages, and
+            other store information organized.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">05</div>
+          <h3>Customer Support</h3>
+          <p>
+            Assistance with customer inquiries, order-related
+            communication, and basic support tasks.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">06</div>
+          <h3>Digital Support</h3>
+          <p>
+            Assistance with selected digital tools and online
+            business tasks as needed.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+        <small>Skills & Tools</small>
+        <h2>Tools I'm building expertise in.</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill">Shopify</div>
+        <div class="skill">eCommerce</div>
+        <div class="skill">Product Listing</div>
+        <div class="skill">Canva</div>
+        <div class="skill">Google Workspace</div>
+        <div class="skill">Customer Support</div>
+        <div class="skill">Social Media</div>
+        <div class="skill">AI Tools</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+
+    <div class="container">
+
+      <div class="section-title">
+        <small>Portfolio</small>
+        <h2>Selected work.</h2>
+      </div>
+
+      <div class="portfolio-card">
+
+        <h3>Portfolio Projects Coming Soon</h3>
+
+        <p>
+          I'm currently building practical Shopify and eCommerce
+          projects to demonstrate my skills. This section will
+          showcase selected store projects, product listing work,
+          and other eCommerce tasks.
+        </p>
+
+        <div class="coming-soon">
+          BUILDING MY PORTFOLIO
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>Let's work together.</h2>
+
+        <p>
+          Looking for reliable support for your Shopify or
+          eCommerce business? I'd be happy to connect and discuss
+          how I can help.
+        </p>
+
+        <a
+          href="mailto:info@jaysonmelgar.com"
+          class="btn btn-secondary"
+        >
+          Contact Me
+        </a>
+
+        <br>
+
+        <a
+          href="mailto:info@jaysonmelgar.com"
+          class="contact-email"
+        >
+          info@jaysonmelgar.com
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 Jayson Melgar. All rights reserved.
+      </p>
+
+      <p>
+        eCommerce & Shopify Specialist
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
